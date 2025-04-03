@@ -22,7 +22,8 @@ jobs:
       - name: Build Slides with Marp
         run: |
           mkdir -p dist
-          cp *.svg *.jpg dist
+          # カレントディレクトリ (サブディレクトリは含まない) から .svg または .jpg ファイルを見つけて dist/ にコピー
+          find . -maxdepth 1 \( -name '*.svg' -o -name '*.jpg' \) -exec cp -t dist {} +
           marp slides.md --html --output dist/index.html
 
       - name: Deploy to GitHub Pages
