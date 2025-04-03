@@ -1,0 +1,59 @@
+* AIポッドキャストを作った
+* どうしてAIポッドキャストを作りたいのか
+** よくポッドキャストを聞いているから
+*** NEWS CONNECT
+*** COTEN RADIO
+*** mozaic.fm
+**** 元ドワのhiroppy氏も出てますね
+*** fukabori.fm
+*** EM.FM
+** zenncastにも影響を受けた。
+*** https://zenn.dev/himara2/articles/db054d81b05d19
+*** OpanAI TTSを使っているっぽい
+* どんなポッドキャストなのか
+** 名前は「NEW CROSS RADIO」
+** 「アイデアとは既存の要素の新しい組み合わせ以外の何ものでもない」という言葉からこの番組では「既存の要素の新しい組み合わせ」を探るために2つのキーワードを組み合わせて考察していく。
+** プレイリスト https://www.youtube.com/playlist?list=PLW9IHR33BNUxdxLKhV_7DAQm3bvR28df1
+** 生成AIをイノベーションに使いたかった。
+* 使った技術
+** Gemini 2.5 Pro / Deep Research / Imagen 3
+** Suno AI
+*** オープニング曲を作るのに使った
+*** 前は音が濁っているように感じたけど、v4になって良くなった気がする
+** Google Cloud Text-to-Speech API
+*** 複数音声のSSMLを簡単に使えたから
+**** 人のかけあいを作りたかった
+**** 意外と複数の音声
+*** 音声の自然さにはまだまだ不満
+** FFmpeg
+*** 人類には早すぎるツールだったが、生成AIで使えるようになった
+** TypeScript / Deno / Dax
+*** 生成AIではTypeScriptを使うことが多い
+*** Denoは使うのは楽だけど、AIの精度はちょっと落ちる＝あまり使われてないかも
+*** Deno ver 1のコードが生成されてver 2に直したり
+*** Daxよりzxを使ったほうがいいかも
+** SSML
+*** SSMLの説明は入れてほしい
+* 作り方
+** 過去のテーマをGemini 2.5 Proに入れて、新しいテーマ案を考えさせる
+** Gemini Deap Researchに論考を書かせる
+** 論考を元にGemini 2.5 ProにSSMLで台本を書かせる
+** Google Cloud Text-to-Speech APIで音声を作成
+** ffmpegで音楽や表紙画像を合成
+** YouTubeにアップロード
+* プロンプトを見てみる
+* コードを見てみる
+** なるべく1ファイルで完結するように書いている
+* 実際にポッドキャストを聞いてみる
+* 所感
+** プログラムを書くのにまだClineとかClaude Codeとかエージェント系は使ってない（セキュリティ的な不安が大きい）
+** 昔Cursorを入れて情シスから連絡が来たことはある
+** OpenAI o3-miniやSonnet 3.5も使っていたが、今はGemini 2.5 Proで十分と感じている
+** ポッドキャストの途中から台本作成がGemini 2.5 Proになったが、内容が良くなったと感じる
+* 余談
+** スライドもGemini 2.5 Proに書かせてる
+*** 最近Marpを使っているのはこのため
+** Emacsでorg-modeで雑に書いて、Marp形式に清書させる
+*** 生成AIで個人的にEmacs回帰が起きている
+** このファイルを見せる
+** プロンプトも見せる

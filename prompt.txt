@@ -1,0 +1,15 @@
+株式会社KADOKAWA Connectedの色やロゴを踏まえたプレゼンテーションツールのMarpのTheme CSSを作成してください。
+色は #23276e です。
+ロゴ画像は https://kdx.co.jp/images/common/logo.svg です。
+表紙の背景色はスライド全面で #333399 にしたいです。
+各スライドの文字の色は #23276e にしたいです。
+また各ページのタイトルはスライド上部に固定し、下線を引き、右側に会社のロゴを置きたいです。
+テーマの名前は kdx にしてください。
+default テーマをimportしてください。
+表紙以外のsection の place-content は start にしたいです。
+表紙のsection の place-content は center にしたいです。
+
+
+
+これはプレゼンテーションツールのMarpのCSSなのですが section.lead のときに中央下のほうに invertd-logo.svg を配置するように修正してください
+_paginate: false で消えちゃうことがわかりました。他の方法はありますか？

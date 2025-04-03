@@ -1,0 +1,60 @@
+/* @theme kdx */
+
+@import 'default';
+
+/* 全スライドの基本文字色を #23276e に設定 */
+section {
+  background-color: #ffffff;
+  color: #23276e;
+  place-content: start;
+}
+
+section.lead {
+  background-color: #333399;
+  color: #ffffff;
+  place-content: center;
+  /* 以下を追加して背景画像として invertd-logo.svg を下中央に配置 */
+  background-image: url("inverted-logo.svg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 12em 6em;
+}
+
+/* 各スライドのタイトルとして、最初の h1 要素を上部固定し下線を付与 */
+section:not(.lead) h1:first-of-type {
+  color: #23276e;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  right: 20px;
+  margin: 0;
+  padding: 10px 20px;
+  border-bottom: 2px solid #23276e;
+  font-size: 2em;
+  z-index: 10;
+  background: transparent;
+}
+
+/* タイトルの右側に会社ロゴを配置（ロゴサイズは文字サイズと同等に 4em に設定） */
+section:not(.lead) h1:first-of-type::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  width: 4em;
+  height: 4em;
+  background: url("logo.svg") no-repeat center;
+  background-size: contain;
+}
+
+/* タイトル下のコンテンツが重ならないように余白を追加 */
+section h1:first-of-type + * {
+  margin-top: 50px;
+}
+
+/* スライドのタイトル */
+section.lead h1 {
+  text-align: center;
+  color: #ffffff;
+}
