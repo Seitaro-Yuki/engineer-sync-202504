@@ -193,10 +193,15 @@ _class: small-title2
 
 # 余談 (3): 参考資料
 
-- このスライドの元になった org-mode ファイル
-- 実際に使ったプロンプト集
+- [このスライドの元になった org-mode ファイル](https://github.com/Seitaro-Yuki/engineer-sync-202504/blob/main/brainstorming.org)
 
-（必要であれば、これらのファイルへのリンクや内容をここに追記）
+```markdown
+以下のまとめを元にMarp形式のMarkdownのスライドを作成してください。
+Marpの箇条書きは * ではなく - を使ってください。
+スライドのタイトルは # 一つだけでいいです。
+```
+
+- [Marpのスライドファイル](https://github.com/Seitaro-Yuki/engineer-sync-202504/blob/main/slides.md)
 
 ---
 
